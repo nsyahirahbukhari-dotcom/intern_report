@@ -145,6 +145,7 @@ body.sidebar-collapsed .main-home {
 }
 
 /* ================= HEADER ================= */
+/* ================= HEADER ================= */
 .header,
 .header-home {
   position: sticky;
@@ -153,47 +154,38 @@ body.sidebar-collapsed .main-home {
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
 
   background: rgba(255,255,255,0.9);
   backdrop-filter: blur(14px);
 
-  padding: 14px 22px;
+  padding: 14px 20px;
   border-radius: 18px;
 
   box-shadow: var(--shadow);
 
-  margin-bottom: 25px;
-
-  gap: var(--space-md);
+  margin: 0 auto 5px;
+  gap: 20px;
 }
 
+/* ================= LOGO ================= */
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
 
-  width: 60px;
   flex-shrink: 0;
-  margin-right: 60px;
-  margin-left: 30px;
 }
 
 .logo img {
   height: 45px;
-  margin-left: 0;
-}
-
-.right-space {
-  width: 60px;
-  flex-shrink: 0;
 }
 
 /* ================= NAVBAR ================= */
 .navbar {
-  width: fit-content;
-  max-width: 100%;
+  flex: 1;
 
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
@@ -201,16 +193,15 @@ body.sidebar-collapsed .main-home {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
 
   flex-wrap: nowrap;
-  overflow-x: auto;
-  scrollbar-width: none;
 
   padding: 10px;
   border-radius: 12px;
 
-  box-shadow: 0 4px var(--space-md) rgba(0,0,0,0.05);
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
 .navbar a {
@@ -262,7 +253,7 @@ body.sidebar-collapsed .main-home {
 .header-home {
   width: 100%;
   max-width: 1400px;
-  margin: 0 auto 25px;
+  margin: 0 auto 5px;
   gap: 15px;
   justify-content: center;
 }
