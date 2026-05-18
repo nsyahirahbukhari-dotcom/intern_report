@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Technical Report</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- CONTENT -->
+  <div class="content-area">
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- HEADER -->
+    <header class="header">
+
+      <div class="logo">
+        <img src="logopoli.png" alt="Poli Logo">
+      </div>
+
+      <nav class="navbar">
+        <a href="index.html">HOME</a>
+        <a href="introduction.html">INTRODUCTION</a>
+        <a href="acknowledgement.html">ACKNOWLEDGEMENTS</a>
+        <a href="activity.html">ACTIVITY SUMMARY</a>
+        <a class="active">TECHNICAL REPORT</a>
+        <a href="conclusion.html">CONCLUSION</a>
+        <a href="references.html">REFERENCES</a>
+      </nav>
+
+      <div class="right-space"></div>
+    </header>
+
+        <h1 class="page-title">TECHNICAL REPORT</h1>
+
+
+        <!-- CONTENT -->
+        <div class="container">
+            <!-- ================= ISSUE FIXING WORKFLOW ================= -->
+            <section class="workflow-section">
+
+            <h2 class="section-title">Issue Fixing & Testing Workflow</h2>
+            <p class="section-subtitle">
+                Workflow used during debugging, fixing issues, and testing processes.
+            </p>
+
+            <div class="workflow-container">
+
+                <div class="workflow-step">
+                <div class="step-number">1</div>
+                <h3>Issue Reported</h3>
+                <div class="slider">
+                    <img src="flow1.1.png" class="slide active" loading="lazy" onclick="openModal(this)">
+                    <img src="flow1.2.png" class="slide" loading="lazy" onclick="openModal(this)">
+                    <img src="flow1.3.png" class="slide" loading="lazy" onclick="openModal(this)">
+                    <button class="prev" onclick="changeSlide(-1)">❮</button>
+                    <button class="next" onclick="changeSlide(1)">❯</button>
+                </div>
+                <p>Task or issue received through the Redmine system, where assigned tasks, issue details, and related requirements were reviewed before starting the debugging and fixing process.</p>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="workflow-step">
+                <div class="step-number">2</div>
+                <h3>Debug Code</h3>
+                <div class="workflow-images">
+                    <img src="debug.png" alt="Debug Code" loading="lazy" onclick="openMOdal(this)">
+                </div>
+                <p>Examined system logs and runtime behavior to pinpoint the issue and locate the corresponding code within the Eclipse development environment.</p>
+                </div>
+                <div class="arrow">↓</div>
+
+                <div class="workflow-step">
+                <div class="step-number">3</div>
+                <h3>Identify Root Cause</h3>
+                <div class="workflow-images">
+                    <img src="rootc.png" alt="Root Cause" loading="lazy" onclick="openMOdal(this) ">
+                </div>
+                <p>Determined the root cause of the problem by analyzing the identified code and application behavior to understand why the issue occurred.</p>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="workflow-step">
+                <div class="step-number">4</div>
+                <h3>Apply Code Fix</h3>
+                <div class="workflow-images">
+                    <img src="fix.png" alt="Fix Code" loading="lazy" onclick="openMOdal(this)">
+                </div>
+                <p>Created and switched to the Redmine branch to implement code changes, then applied code modifications to address the root cause of the problem and restore expected system behavior.</p>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="workflow-step">
+                <div class="step-number">5</div>
+                <h3>Local Testing</h3>
+                <div class="workflow-images">
+                    <img src="testLocal.png" alt="Local Testing" loading="lazy" onclick="openMOdal(this)">
+                </div>
+                <p>Test functionality in Local environment before merging the code.</p>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="workflow-step">
+                <div class="step-number">6</div>
+                <h3>Merge Code</h3>
+                <div class="slider">
+                    <img src="merge2.png" class="slide active" loading="lazy" onclick="openModal(this)">
+                    <img src="merge3.png" class="slide" loading="lazy" onclick="openModal(this)">
+                    <img src="merge4.png" class="slide" loading="lazy" onclick="openModal(this)">
+                    <img src="merge5.png" class="slide" loading="lazy" onclick="openModal(this)">
+                    <img src="merge6.png" class="slide" loading="lazy" onclick="openModal(this)">
+                    <img src="merge.png" class="slide" loading="lazy" onclick="openModal(this)">
+                    <button class="prev" onclick="changeSlide(-1)">❮</button>
+                    <button class="next" onclick="changeSlide(1)">❯</button>
+                </div>
+                <p>Committed and pushed the updated code to the repository. After updating the branch, the latest changes from the master branch were pulled to ensure synchronization. The Redmine branch was then merged into the master branch, and the repository was refreshed to verify that all updates were successfully reflected.</p>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="workflow-step">
+                <div class="step-number">7</div>
+                <h3>Sanity Testing</h3>
+                <div class="slider">
+                    <img src="sanTest.png" class="slide active" loading="lazy" onclick="openModal(this)">
+                    <img src="sanTest2.png" class="slide" loading="lazy" onclick="openModal(this)">
+                    <img src="sanTest3.png" class="slide" loading="lazy" onclick="openModal(this)">
+                    <button class="prev" onclick="changeSlide(-1)">❮</button>
+                    <button class="next" onclick="changeSlide(1)">❯</button>
+                </div>
+                <p>Performed functional testing on the impacted file by logging in with the appropriate user role, accessing the affected module or screen, and validating that all related functionalities operated correctly after the code modifications.</p>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="workflow-step">
+                <div class="step-number">8</div>
+                <h3>Generate Test Report</h3>
+                <div class="slider">
+                    <img src="report.png" class="slide active" loading="lazy" onclick="openModal(this)">
+                    <img src="report2.png" class="slide" loading="lazy" onclick="openModal(this)">
+                    <img src="report3.png" class="slide" loading="lazy" onclick="openModal(this)">
+                    <button class="prev" onclick="changeSlide(-1)">❮</button>
+                    <button class="next" onclick="changeSlide(1)">❯</button>
+                </div>
+                <p>Recorded the testing outcomes and issue resolution process and uploaded the updates to Redmine for documentation and issue tracking purposes.</p>
+                </div>
+
+                <div class="arrow">↓</div>
+
+                <div class="workflow-step">
+                <div class="step-number">9</div>
+                <h3>Additional Environment Testing</h3>
+                <p>If required, the same implementation and testing procedures were performed in other environments to ensure successful deployment and consistent system functionality.</p>
+                </div>
+
+            </div>
+
+            </section>
+        </div>
+    <!-- IMAGE MODAL -->
+  <div id="imgModal" class="modal">
+    <span class="close">&times;</span>
+
+    <button class="modal-prev">❮</button>
+
+    <img class="modal-content" id="modalImg">
+
+    <button class="modal-next">❯</button>
+  </div>
+
+</div>
+<script>
+function toggleCard(el) {
+  el.parentElement.classList.toggle("active");
+}
+
+let modalImages = [];
+let currentIndex = 0;
+
+function openModal(img) {
+  const slider = img.closest(".slider");
+
+  modalImages = Array.from(slider.querySelectorAll(".slide"));
+  currentIndex = modalImages.indexOf(img);
+
+  document.getElementById("imgModal").style.display = "flex";
+  document.getElementById("modalImg").src = modalImages[currentIndex].src;
+}
+
+function openMOdal(img) {
+  const modal = document.getElementById("imgModal");
+  modal.style.display = "flex";
+
+  document.getElementById("modalImg").src = img.src;
+}
+
+function showModalImage(index) {
+  if (index >= 0 && index < modalImages.length) {
+    currentIndex = index;
+    document.getElementById("modalImg").src = modalImages[currentIndex].src;
+  }
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+
+/* ================= IMAGE SLIDER ================= */
+
+document.querySelectorAll(".slider").forEach(slider => {
+
+  let slides = slider.querySelectorAll(".slide");
+  let current = 0;
+
+  const prevBtn = slider.querySelector(".prev");
+  const nextBtn = slider.querySelector(".next");
+
+  function show(index) {
+
+    slides.forEach(s => s.classList.remove("active"));
+
+    slides[index].classList.add("active");
+
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === slides.length - 1;
+
+    current = index;
+  }
+
+  function change(step) {
+    let newIndex = current + step;
+
+    if(newIndex >= 0 && newIndex < slides.length) {
+      show(newIndex);
+    }
+  }
+
+  prevBtn.addEventListener("click", () => change(-1));
+  nextBtn.addEventListener("click", () => change(1));
+
+  show(0);
+});
+
+document.querySelector(".modal-prev").addEventListener("click", () => {
+  showModalImage(currentIndex - 1);
+});
+
+document.querySelector(".modal-next").addEventListener("click", () => {
+  showModalImage(currentIndex + 1);
+});
+
+document.querySelector(".close").addEventListener("click", () => {
+  document.getElementById("imgModal").style.display = "none";
+});
+
+document.addEventListener("keydown", (e) => {
+  if (document.getElementById("imgModal").style.display === "flex") {
+    if (e.key === "ArrowRight") showModalImage(currentIndex + 1);
+    if (e.key === "ArrowLeft") showModalImage(currentIndex - 1);
+    if (e.key === "Escape") document.getElementById("imgModal").style.display = "none";
+  }
+});
+
+</script>
+
+</body>
+</html>
