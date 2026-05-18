@@ -140,11 +140,11 @@ body.sidebar-collapsed .main-home {
 
 .content-area {
   width: 100%;
-  max-width: 1700px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-/* ================= HEADER ================= */
 /* ================= HEADER ================= */
 .header,
 .header-home {
@@ -169,6 +169,10 @@ body.sidebar-collapsed .main-home {
 
   margin: 0 auto 5px;
   gap: 20px;
+}
+
+.header > * {
+  max-width: 1200px;
 }
 
 /* ================= LOGO ================= */
@@ -249,14 +253,6 @@ body.sidebar-collapsed .main-home {
   border-radius: 10px;
 }
 
-.header,
-.header-home {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto 5px;
-  gap: 15px;
-  justify-content: center;
-}
 
 /* ================= HERO ================= */
 .hero {
@@ -317,6 +313,7 @@ body.sidebar-collapsed .main-home {
 .card {
   position: relative;
   overflow: hidden;
+  justify-content: center;
 
   margin-top: var(--space-md);
   padding: var(--space-lg);
@@ -468,10 +465,13 @@ body.sidebar-collapsed .main-home {
 /* ================= ACKNOWLEDGEMENT ================= */
 
 .ack-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 24px auto 0;
+
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
-  margin-top: 24px;
 }
 
 /* CARD */
@@ -660,7 +660,7 @@ body.sidebar-collapsed .main-home {
 
 .layout {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--space-md);
   padding: var(--space-lg) var(--space-md) var(--space-md) 5px;
 }
@@ -709,6 +709,7 @@ body.sidebar-collapsed .main-home {
 
   /* PAGE TITLE */
   .page-title {
+    width: 100%;
     text-align: center;
     margin: var(--space-lg) 0;
     color: #602234;
@@ -785,9 +786,10 @@ body.sidebar-collapsed .main-home {
 }
 
 .container {
-  width: 95%;
-  max-width: none;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
 .week-images {
