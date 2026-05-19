@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Acknowledgements</title>
@@ -11,7 +12,7 @@
 <body>
 
   <!-- MAIN -->
-  <div class="main">
+  <div class="main no-sidebar">
 
     <!-- HEADER -->
     <header class="header">
@@ -41,12 +42,12 @@
 
         <!-- CARD 1 -->
         <div class="ack-card">
-          <img src="cdc.jpg" alt="Organization" class="ack-img">
+          <img src="cdc.jpg" alt="Organization" class="ack-img" onclick="openModal(this)">
           <h3>🏢 Organization</h3>
           <p>
-            I would like to express my sincere appreciation to Commerce Dot Com Sdn. Bhd. 
-            for giving me the opportunity to undergo my industrial training. The exposure 
-            to real working environments has helped me enhance both my technical and 
+            I would like to express my sincere appreciation to Commerce Dot Com Sdn. Bhd.
+            for giving me the opportunity to undergo my industrial training. The exposure
+            to real working environments has helped me enhance both my technical and
             communication skills.
           </p>
         </div>
@@ -54,44 +55,60 @@
 
         <!-- CARD 2 -->
         <div class="ack-card">
-          <img src="sv.jpeg" alt="Supervisor" class="ack-img">
+          <img src="sv.jpeg" alt="Supervisor" class="ack-img" onclick="openModal(this)">
           <h3>✨ Supervisor</h3>
           <p>
-            My deepest gratitude goes to my industrial supervisor for their continuous 
-            guidance, patience, and support throughout my internship. Their advice and 
+            My deepest gratitude goes to my industrial supervisor for their continuous
+            guidance, patience, and support throughout my internship. Their advice and
             feedback have been very valuable in helping me grow professionally.
           </p>
         </div>
 
         <!-- CARD 3 -->
         <div class="ack-card">
-          <img src="lect3.jpeg" alt="Lecturers" class="ack-img">
+          <div class="slider">
+            <img src="lect2.jpeg" alt="Lecturers" class="ack-img slide active" onclick="openModal(this)">
+            <img src="lect.jpeg" alt="Lecturers" class="ack-img slide" onclick="openModal(this)">
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+          </div>
           <h3>🎓 Lecturers</h3>
           <p>
-            I would also like to thank my lecturers at Politeknik Sultan Idris Shah for 
-            their dedication, knowledge, and encouragement throughout my studies, which 
+            I would also like to thank my lecturers at Politeknik Sultan Idris Shah for
+            their dedication, knowledge, and encouragement throughout my studies, which
             have prepared me for this internship experience.
           </p>
         </div>
 
         <!-- CARD 4 -->
         <div class="ack-card">
-          <img src="fam.jpeg" alt="Family and Friends" class="ack-img">
-          <h3>👨‍👩‍👧 Family & Friends</h3>
+          <img src="fam.jpeg" alt="Family" class="ack-img" onclick="openModal(this)">
+          <h3>👨‍👩‍👧 Family</h3>
           <p>
-            Special thanks to my family and friends for their endless support, motivation, 
-            and understanding during my internship journey. Their encouragement has helped 
+            Special thanks to my family for their endless support, motivation,
+            and understanding during my internship journey. Their encouragement has helped
             me stay strong and focused.
           </p>
         </div>
 
         <!-- CARD 5 -->
-        <div class="ack-card full">
+        <div class="ack-card">
+          <!-- TODO: Insert your friends image below (replace friends.jpeg) -->
+          <img src="fwends.jpeg" alt="Friends" class="ack-img" onclick="openModal(this)">
+          <h3>👯 Friends</h3>
+          <p>
+            I also want to thank my friends for being there for me, sharing experiences,
+            and making this journey more enjoyable and memorable. Your support means the world to me.
+          </p>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="ack-card center-content">
           <h3>💖 Appreciation</h3>
           <p>
-              Lastly, I would like to thank everyone who has directly or indirectly contributed 
-              to the success of my industrial training. Your support and kindness mean a lot 
-              to me and have made this journey truly meaningful.
+            Lastly, I would like to thank everyone who has directly or indirectly contributed
+            to the success of my industrial training. Your support and kindness mean a lot
+            to me and have made this journey truly meaningful.
           </p>
         </div>
 
@@ -100,5 +117,110 @@
     </main>
   </div>
 
+  <!-- IMAGE MODAL -->
+  <div id="imgModal" class="modal">
+    <span class="close">&times;</span>
+    <button class="modal-prev">❮</button>
+    <img class="modal-content" id="modalImg">
+    <button class="modal-next">❯</button>
+  </div>
+
+  <script>
+    let modalImages = [];
+    let currentIndex = 0;
+
+    function openModal(img) {
+      const card = img.closest(".ack-card");
+      if (card) {
+        modalImages = Array.from(card.querySelectorAll(".ack-img"));
+        currentIndex = modalImages.indexOf(img);
+
+        document.getElementById("imgModal").style.display = "flex";
+        document.getElementById("modalImg").src = modalImages[currentIndex].src;
+
+        // Show/hide prev/next buttons based on number of images
+        const prevBtn = document.querySelector(".modal-prev");
+        const nextBtn = document.querySelector(".modal-next");
+
+        prevBtn.style.display = modalImages.length > 1 ? "block" : "none";
+        nextBtn.style.display = modalImages.length > 1 ? "block" : "none";
+
+        updateButtonStates();
+      }
+    }
+
+    function updateButtonStates() {
+      const prevBtn = document.querySelector(".modal-prev");
+      const nextBtn = document.querySelector(".modal-next");
+
+      if (modalImages.length > 1) {
+        prevBtn.style.opacity = currentIndex === 0 ? "0.3" : "1";
+        prevBtn.style.cursor = currentIndex === 0 ? "default" : "pointer";
+
+        nextBtn.style.opacity = currentIndex === modalImages.length - 1 ? "0.3" : "1";
+        nextBtn.style.cursor = currentIndex === modalImages.length - 1 ? "default" : "pointer";
+      }
+    }
+
+    function showModalImage(index) {
+      if (index >= 0 && index < modalImages.length) {
+        currentIndex = index;
+        document.getElementById("modalImg").src = modalImages[currentIndex].src;
+        updateButtonStates();
+      }
+    }
+
+    document.querySelector(".modal-prev").addEventListener("click", () => {
+      showModalImage(currentIndex - 1);
+    });
+
+    document.querySelector(".modal-next").addEventListener("click", () => {
+      showModalImage(currentIndex + 1);
+    });
+
+    document.querySelector(".close").addEventListener("click", () => {
+      document.getElementById("imgModal").style.display = "none";
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (document.getElementById("imgModal").style.display === "flex") {
+        if (e.key === "ArrowRight") showModalImage(currentIndex + 1);
+        if (e.key === "ArrowLeft") showModalImage(currentIndex - 1);
+        if (e.key === "Escape") document.getElementById("imgModal").style.display = "none";
+      }
+    });
+
+    /* ================= IMAGE SLIDER ================= */
+    document.querySelectorAll(".slider").forEach(slider => {
+      let slides = slider.querySelectorAll(".slide");
+      let current = 0;
+
+      const prevBtn = slider.querySelector(".prev");
+      const nextBtn = slider.querySelector(".next");
+
+      function show(index) {
+        slides.forEach(s => s.classList.remove("active"));
+        slides[index].classList.add("active");
+
+        if (prevBtn) prevBtn.disabled = index === 0;
+        if (nextBtn) nextBtn.disabled = index === slides.length - 1;
+
+        current = index;
+      }
+
+      function change(step) {
+        let newIndex = current + step;
+        if (newIndex >= 0 && newIndex < slides.length) {
+          show(newIndex);
+        }
+      }
+
+      if (prevBtn) prevBtn.addEventListener("click", () => change(-1));
+      if (nextBtn) nextBtn.addEventListener("click", () => change(1));
+
+      if (slides.length > 0) show(0);
+    });
+  </script>
 </body>
+
 </html>
