@@ -34,15 +34,23 @@
       <div class="right-space"></div>
     </header>
 
+    <h1 class="page-title">ACKNOWLEDGEMENTS</h1>
+
     <main class="content-area container">
-
-      <h1 class="page-title">ACKNOWLEDGEMENTS</h1>
-
       <div class="ack-grid">
 
         <!-- CARD 1 -->
         <div class="ack-card">
-          <img src="cdc.jpg" alt="Organization" class="ack-img" onclick="openModal(this)">
+          <div class="slider">
+            <img src="cdc.jpg" alt="Organization" class="ack-img slide active" onclick="openModal(this)">
+            <!-- TODO: Replace cdc2.jpg and cdc3.jpg with your actual image filenames -->
+            <img src="org.jpeg" alt="Organization" class="ack-img slide" onclick="openModal(this)"
+              onerror="this.src='https://via.placeholder.com/600x400?text=Org+Image+2'">
+            <img src="org2.jpeg" alt="Organization" class="ack-img slide" onclick="openModal(this)"
+              onerror="this.src='https://via.placeholder.com/600x400?text=Org+Image+3'">
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+          </div>
           <h3>🏢 Organization</h3>
           <p>
             I would like to express my sincere appreciation to Commerce Dot Com Sdn. Bhd.
@@ -58,8 +66,8 @@
           <img src="sv.jpeg" alt="Supervisor" class="ack-img" onclick="openModal(this)">
           <h3>✨ Supervisor</h3>
           <p>
-            My deepest gratitude goes to my industrial supervisor for their continuous
-            guidance, patience, and support throughout my internship. Their advice and
+            My deepest gratitude goes to my industrial supervisor for her continuous
+            guidance, patience, and support throughout my internship. Her advice and
             feedback have been very valuable in helping me grow professionally.
           </p>
         </div>

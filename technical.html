@@ -12,7 +12,7 @@
 <body>
 
   <!-- MAIN -->
-  <div class="main no-sidebar">
+  <div class="main">
 
     <!-- HEADER -->
     <header class="header">
@@ -37,10 +37,23 @@
         <h1 class="page-title">TECHNICAL REPORT</h1>
 
 
-        <!-- CONTENT -->
-        <div class="container content-area">
-            <!-- ================= ISSUE FIXING WORKFLOW ================= -->
-            <section class="workflow-section">
+        <!-- ================= LAYOUT ================= -->
+        <div class="layout">
+        
+          <!-- SIDEBAR -->
+          <aside class="sidebar">
+            <h3>CONTENTS</h3>
+            <a href="#workflow">Issue Fixing Workflow</a>
+            <a href="#learning">Key Learning Outcomes</a>
+            <a href="#challenges">Challenges & Solutions</a>
+            <a href="#skills">Skills Gained</a>
+            <a href="#summary">Technical Summary</a>
+          </aside>
+
+          <!-- CONTENT -->
+          <main class="content-area">
+              <!-- ================= ISSUE FIXING WORKFLOW ================= -->
+              <section id="workflow" class="workflow-section">
 
             <h2 class="section-title">Issue Fixing & Testing Workflow</h2>
             <p class="section-subtitle">
@@ -166,7 +179,7 @@
             </section>
 
             <!-- ================= KEY LEARNING OUTCOMES ================= -->
-            <section class="learning-section">
+            <section id="learning" class="learning-section">
 
                 <h2 class="section-title">Key Learning Outcomes</h2>
                 <p class="section-subtitle">
@@ -177,7 +190,7 @@
 
                     <!-- TECHNICAL -->
                     <div class="learning-card">
-                        <h3>Technical Skills</h3>
+                        <h3>🛠️ Technical Skills</h3>
 
                         <ul>
                             <li>Improved debugging and troubleshooting skills using Eclipse and system logs.</li>
@@ -194,7 +207,7 @@
 
                     <!-- PROFESSIONAL -->
                     <div class="learning-card">
-                        <h3>Professional Skills</h3>
+                        <h3>💼 Professional Skills</h3>
 
                         <ul>
                             <li>Improved communication skills through collaboration with team members and reporting updates.</li>
@@ -211,7 +224,7 @@
 
                     <!-- PROBLEM SOLVING -->
                     <div class="learning-card">
-                        <h3>Problem-Solving Skills</h3>
+                        <h3>🧩 Problem-Solving Skills</h3>
 
                         <ul>
                             <li>Learned to analyze issues systematically to identify the root cause effectively.</li>
@@ -231,7 +244,7 @@
             </section>
 
             <!-- ================= CHALLENGES & SOLUTIONS ================= -->
-            <section class="challenge-section">
+            <section id="challenges" class="challenge-section">
 
                 <h2 class="section-title">Challenges & Solutions</h2>
 
@@ -246,14 +259,14 @@
                         <h3>Understanding Existing System Structure</h3>
 
                         <div class="challenge-box">
-                            <span>Challenge</span>
+                            <span>⚠️ Challenge</span>
                             <p>
                                 Difficulty understanding the existing system structure and large codebase.
                             </p>
                         </div>
 
                         <div class="solution-box">
-                            <span>Solution</span>
+                            <span>💡 Solution</span>
                             <p>
                                 Referred to existing code and documentation to better understand the system flow and functionality.
                             </p>
@@ -265,14 +278,14 @@
                         <h3>Deployment & Environment Issues</h3>
 
                         <div class="challenge-box">
-                            <span>Challenge</span>
+                            <span>⚠️ Challenge</span>
                             <p>
                                 Errors occurred during deployment across different environments such as DEV, SIT, and UAT.
                             </p>
                         </div>
 
                         <div class="solution-box">
-                            <span>Solution</span>
+                            <span>💡 Solution</span>
                             <p>
                                 Applied step-by-step debugging and log analysis techniques to trace and resolve the issues.
                             </p>
@@ -284,14 +297,14 @@
                         <h3>System Stability & Testing</h3>
 
                         <div class="challenge-box">
-                            <span>Challenge</span>
+                            <span>⚠️ Challenge</span>
                             <p>
                                 Risk of introducing new bugs while ensuring all system components remained stable under time constraints.
                             </p>
                         </div>
 
                         <div class="solution-box">
-                            <span>Solution</span>
+                            <span>💡 Solution</span>
                             <p>
                                 Performed repeated testing after implementing fixes to ensure system stability and functionality.
                             </p>
@@ -303,14 +316,14 @@
                         <h3>GitLab Merge Workflow</h3>
 
                         <div class="challenge-box">
-                            <span>Challenge</span>
+                            <span>⚠️ Challenge</span>
                             <p>
                                 Faced code merge conflicts and approval restrictions during the GitLab workflow process.
                             </p>
                         </div>
 
                         <div class="solution-box">
-                            <span>Solution</span>
+                            <span>💡 Solution</span>
                             <p>
                                 Followed the proper GitLab workflow and improved branch discipline after learning from previous mistakes.
                             </p>
@@ -320,6 +333,31 @@
                 </div>
 
             </section>
+
+            <!-- ================= SKILLS GAINED ================= -->
+            <section id="skills" class="learning-section">
+                <h2 class="section-title">Skills Gained</h2>
+                <p class="section-subtitle">Core competencies developed throughout the internship.</p>
+                <div class="card" style="text-align: center; margin: 0 auto;">
+                    <span class="badge">Problem-solving</span>
+                    <span class="badge">Debugging skills</span>
+                    <span class="badge">System testing & documentation</span>
+                    <span class="badge">GitLab workflow</span>
+                    <span class="badge">Communication skills</span>
+                    <span class="badge">Time management</span>
+                </div>
+            </section>
+
+            <!-- ================= TECHNICAL SUMMARY ================= -->
+            <section id="summary" class="learning-section">
+                <h2 class="section-title">Technical Summary</h2>
+                <p class="section-subtitle">An overview of technical achievements.</p>
+                <div class="card" style="margin: 0 auto;">
+                    <p>Throughout the internship, significant technical milestones were achieved, including the successful resolution of complex bugs, improvement of existing UI components, and the execution of comprehensive system testing. Working with real-world enterprise applications enhanced practical knowledge of the GitLab workflow, Java development, and Oracle database management. The hands-on experience bridged the gap between academic theory and industry practices, establishing a solid foundation for a future career in software engineering.</p>
+                </div>
+            </section>
+
+          </main>
         </div>
     <!-- IMAGE MODAL -->
   <div id="imgModal" class="modal">
@@ -331,7 +369,8 @@
 
     <button class="modal-next">❯</button>
   </div>
-
+</div>
+</body>
 </div>
 <script>
 function toggleCard(el) {
