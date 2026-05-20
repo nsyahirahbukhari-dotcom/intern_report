@@ -54,7 +54,7 @@ body {
   width: 260px;
   height: 100vh;
   gap: 18px;
-
+  
   padding: 30px var(--space-md);
 
   display: flex;
@@ -76,7 +76,7 @@ body {
 
 .sidebar h2,
 .sidebar h3 {
-  color: var(--text-dark);
+  color: #602234;
 }
 
 .sidebar img {
@@ -184,9 +184,27 @@ body.sidebar-collapsed .main-home {
   width: 6px;
 }
 
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .sidebar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+    180deg,
+    rgba(96, 34, 52, 0.4),
+    rgba(185, 149, 161, 0.6)
+  );
+
   border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(96, 34, 52, 0.7),
+    rgba(185, 149, 161, 0.9)
+  );
 }
 
 .content-area {
@@ -737,6 +755,8 @@ body.sidebar-collapsed .main-home {
   margin-bottom: var(--space-sm);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
   overflow: hidden;
+  align-items: center;
+  text-align: center;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -766,6 +786,7 @@ body.sidebar-collapsed .main-home {
   margin-left: var(--space-md);
   transition: max-height 0.5s ease, padding 0.3s ease;
   padding: 0 var(--space-md);
+  align-items: center;
 }
 
 /* FIXED CLASS HERE */
@@ -789,7 +810,8 @@ body.sidebar-collapsed .main-home {
 }
 
 .tech-list {
-  padding-left: 18px;
+  list-style-position: inside;
+  padding-left: 0px;
   margin-top: 10px;
 }
 
